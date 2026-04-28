@@ -79,7 +79,7 @@ The image arm uses the [FairFace dataset](https://github.com/joojs/fairface) (KÃ
 ../data/fairface/train/
 ```
 
-The label CSV (`combined_curated_fairface.csv`) is included in this repository.
+The label CSVs (`combined_curated_fairface.csv`, `curated_fairface_val.csv`, `curated_fairface_train_elderly.csv`) are not committed to this repository due to file size. Place them at `../data/fairface/` alongside the image directories.
 
 ### 3. Set API keys
 
