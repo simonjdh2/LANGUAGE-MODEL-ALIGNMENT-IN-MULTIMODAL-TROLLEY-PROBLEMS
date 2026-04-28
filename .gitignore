@@ -1,0 +1,26 @@
+# API keys
+.env
+*.env
+
+# FairFace images (large binary dataset — download separately)
+data/fairface/val/
+data/fairface/train/
+
+# Experiment output
+results/
+unified_results/
+
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+.venv/
+venv/
+env/
+
+# macOS
+.DS_Store
+
+# Editor
+.vscode/
+.idea/
