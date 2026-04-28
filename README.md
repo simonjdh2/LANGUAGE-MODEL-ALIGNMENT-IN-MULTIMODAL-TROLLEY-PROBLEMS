@@ -124,7 +124,7 @@ Perception reliability was validated before the main run using repeated percepti
 | Model | Fully consistent groups | Per-field agreement |
 |---|---|---|
 | Claude (`claude-sonnet-4-6`) | 90% | 94–100% |
-| OpenAI (`gpt-4.1-nano`) | 85% | 88–93% |
+| OpenAI (`gpt-4.1`) | 85% | 88–93% |
 | Gemini (`gemini-2.5-flash`) | 88% | 95–100% |
 
 Remaining variability across all models is concentrated in age classification. Race and gender are near-deterministic at `temperature=0`.
