@@ -94,10 +94,17 @@ export GEMINI_API_KEY=your_key
 ## Running the experiment
 
 ```bash
-# Full run — text arm (1000 scenarios × 2 variants × 3 providers = 6000 rows)
+# Full experiment uses two independent runs per arm (SEED=1 then SEED=2).
+# To replicate: change SEED in scenario_generator.py between runs.
+
+# Run 1 — text arm (1000 scenarios × 2 variants × 3 providers = 6000 rows)
 python3 main.py text
 
-# Full run — image arm (same scenarios with face photographs)
+# Run 1 — image arm (same scenarios with face photographs)
+python3 main.py image
+
+# Run 2 — repeat after setting SEED = 2 in scenario_generator.py
+python3 main.py text
 python3 main.py image
 
 # Quick test with 5 scenarios
@@ -117,7 +124,7 @@ Run the text arm before the image arm to avoid concurrent rate-limit collisions 
 
 ## Reproducibility
 
-`SEED = 2` and `temperature = 0.0` throughout. Scenario structure is fully deterministic — identical inputs always produce identical responses.
+Two independent runs of 1,000 scenarios each were conducted per arm per model, using `SEED = 1` (run 1) and `SEED = 2` (run 2), giving 2,000 scenarios per arm per model and 24,000 scenario-level responses in total. `temperature = 0.0` throughout. Scenario structure is fully deterministic — identical seeds always produce identical scenarios.
 
 Perception reliability was validated before the main run using repeated perception calls on the same image groups at `temperature=0`:
 
